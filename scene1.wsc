@@ -127,8 +127,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -269.5,
-				"y": 34
+				"x": -271,
+				"y": 36.81836389175016
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -221,7 +221,7 @@
 			},
 			"properties": {},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t    \n\t    wade.app.foundDifferences++;\n\t    \n\t    wade.getSceneObject('scoreText').getSprite(0).setText(\n\t         wade.app.foundDifferences + ' / ' + wade.app.totalDifferences);\n\t            \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
 		},
@@ -324,7 +324,7 @@
 				"instanceOf": "difference"
 			},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    wade.getSceneObject(\"scoreText\").getSprite(0).setText(\n\t         wade.app.foundDifferences + \" / \" + wade.app.totalDifferences);\n\t   \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
 		},
@@ -427,7 +427,7 @@
 				"instanceOf": "difference"
 			},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t    \n\t    wade.getSceneObject(\"scoreText\").getSprite(0).setText(\n\t         wade.app.foundDifferences + \" / \" + wade.app.totalDifferences);\n\t   \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
 		},
@@ -530,7 +530,7 @@
 				"instanceOf": "difference"
 			},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t    \n\t    wade.getSceneObject(\"scoreText\").getSprite(0).setText(\n\t         wade.app.foundDifferences + \" / \" + wade.app.totalDifferences);\n\t   \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
 		},
@@ -633,7 +633,7 @@
 				"instanceOf": "difference"
 			},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    wade.getSceneObject(\"scoreText\").getSprite(0).setText(\n\t         wade.app.foundDifferences + \" / \" + wade.app.totalDifferences);\n\t   \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
 		},
@@ -736,7 +736,7 @@
 				"instanceOf": "difference"
 			},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    wade.getSceneObject(\"scoreText\").getSprite(0).setText(\n\t         wade.app.foundDifferences + \" / \" + wade.app.totalDifferences);\n\t   \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
 		},
@@ -839,9 +839,78 @@
 				"instanceOf": "difference"
 			},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t\n\t\n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
+				"onMouseDown": "function (data)\n{\n\t//so the differences found counter doesnt increase if we click on the same difference\n\t\n\tif(!this.isFound && !this.clonedObject.isFound){\n\t    \n\t    this.getSprite(0).setVisible(true);\n\t    this.clonedObject.getSprite(0).setVisible(true);\n\t\n\t    wade.app.foundDifferences++;\n\t\n\t    wade.getSceneObject(\"scoreText\").getSprite(0).setText(\n\t         wade.app.foundDifferences + \" / \" + wade.app.totalDifferences);\n\t   \n\t    if(wade.app.foundDifferences == wade.app.totalDifferences)\n\t    {\n\t        wade.app.gameOver();\n\t    }\n\t    this.isFound = true;\n\t}\n}",
 				"onAddToScene": "function (data)\n{\n\tvar clone = this.clone();\n\tclone.setPosition(this.getPosition().x + 850/2, this.getPosition().y);\n\t\n\tclone.onAddToScene = null;\n\twade.addSceneObject(clone,true);\n\t\n\tthis.clonedObject = clone;\n\tclone.clonedObject = this;\n}"
 			}
+		},
+		{
+			"type": "SceneObject",
+			"position": {
+				"x": -0.8407517309594461,
+				"y": -256.54754779074216
+			},
+			"rotation": 0,
+			"behaviors": [],
+			"sprites": [
+				{
+					"type": "TextSprite",
+					"text": "initial",
+					"name": "",
+					"font": "45px Arial",
+					"alignment": "center",
+					"color": "#34f005",
+					"visible": true,
+					"layer": 1,
+					"maxWidth": 0,
+					"shadowColor": "#000",
+					"shadowBlur": 0,
+					"shadowOffset": {
+						"x": 0,
+						"y": 0
+					},
+					"lineSpacing": 1,
+					"maxLines": 0,
+					"firstLine": 0,
+					"outlineColor": "#000",
+					"outlineWidth": 0,
+					"boundsScale": {
+						"x": 1,
+						"y": 1
+					},
+					"sortPoint": {
+						"x": 0,
+						"y": 0
+					},
+					"fixedSize": false,
+					"drawModifiers": [
+						{
+							"type": "additive"
+						}
+					],
+					"properties": {}
+				}
+			],
+			"spriteOffsets": [
+				{
+					"x": 0,
+					"y": 0,
+					"angle": 0
+				}
+			],
+			"flowChart": null,
+			"grid": null,
+			"alignment": {
+				"x": "center",
+				"y": "center"
+			},
+			"name": "scoreText",
+			"isTemplate": false,
+			"path": "",
+			"addToScene": {
+				"autoListen": true,
+				"params": null
+			},
+			"properties": {}
 		}
 	],
 	"paths": [],
@@ -893,5 +962,6 @@
 	"timeline": {
 		"events": []
 	},
-	"webAudioOnly": false
+	"webAudioOnly": false,
+	"fonts": []
 }
