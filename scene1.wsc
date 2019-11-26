@@ -963,5 +963,10 @@
 		"events": []
 	},
 	"webAudioOnly": false,
-	"fonts": []
+	"fonts": [],
+	"json": [],
+	"scripts": [
+		"dataJSON.js",
+		"iteratorDataJSON.js"
+	]
 }
