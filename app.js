@@ -1,6 +1,6 @@
 App = function() {
-  this.foundDifferences;
-  this.totalDifferences;
+  this.foundDifferences = 0;
+  this.totalDifferences = 7;
   
   this.sceneNumber = 0;
   var sceneInfo;
@@ -18,13 +18,13 @@ App = function() {
   }
 
   function load() {
-    wade.loadScene('scene2.wsc', true, function() {
+    wade.loadScene('scene1.wsc', true, function() {
     
-      wade.app.foundDifferences = 0;
+      //wade.app.foundDifferences = 0;
       
-      sceneInfo = getNextSceneInfo( wade.app.sceneNumber);
+      //sceneInfo = getNextSceneInfo( wade.app.sceneNumber);
 
-      buildNewScene(sceneInfo);
+      //buildNewScene(sceneInfo);
 
       wade.getSceneObject('scoreText').getSprite(0).setText(
         wade.app.foundDifferences + " / " + wade.app.totalDifferences);
