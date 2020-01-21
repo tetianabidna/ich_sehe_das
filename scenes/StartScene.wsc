@@ -200,8 +200,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -270,
-				"y": -150
+				"x": -570,
+				"y": -80
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -237,8 +237,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -270,8 +270,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 1.168930731241,
-				"y": -150
+				"x": -190,
+				"y": -80
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -302,8 +302,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -337,8 +337,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 270,
-				"y": -150
+				"x": 190,
+				"y": -80
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -369,8 +369,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -405,8 +405,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -270,
-				"y": 90
+				"x": 570,
+				"y": -80
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -437,8 +437,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -472,8 +472,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 0,
-				"y": 90
+				"x": -570,
+				"y": 290
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -504,8 +504,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -539,8 +539,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 270,
-				"y": 90
+				"x": -190,
+				"y": 290
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -571,8 +571,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -606,8 +606,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -270,
-				"y": 330
+				"x": 190,
+				"y": 290
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -638,8 +638,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -673,8 +673,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 0,
-				"y": 330
+				"x": 570,
+				"y": 290
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -705,8 +705,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 220,
-						"y": 220
+						"x": 350,
+						"y": 350
 					}
 				}
 			],
@@ -740,75 +740,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 270,
-				"y": 330
-			},
-			"rotation": 0,
-			"behaviors": [],
-			"sprites": [
-				{
-					"type": "Sprite",
-					"animations": {},
-					"currentAnimation": "default",
-					"sortPoint": {
-						"x": 0,
-						"y": 0
-					},
-					"layer": 1,
-					"autoResize": false,
-					"visible": true,
-					"image": "assets/imgForPlay/dinosaurier_orig.jpeg",
-					"imageArea": {
-						"minX": 0,
-						"minY": 0,
-						"maxX": 1,
-						"maxY": 1
-					},
-					"alwaysDraw": false,
-					"name": "8",
-					"drawModifiers": [],
-					"pixelShader": "",
-					"pixelShaderUniforms": null,
-					"pixelPerfectMouseEvents": 0,
-					"properties": {},
-					"size": {
-						"x": 220,
-						"y": 220
-					}
-				}
-			],
-			"spriteOffsets": [
-				{
-					"x": 0,
-					"y": 0,
-					"angle": 0
-				}
-			],
-			"flowChart": null,
-			"grid": null,
-			"alignment": {
-				"x": "center",
-				"y": "center"
-			},
-			"name": "level_8",
-			"isTemplate": false,
-			"path": "",
-			"addToScene": {
-				"autoListen": true,
-				"params": null
-			},
-			"properties": {
-				"instanceOf": "SceneObject_1"
-			},
-			"functions": {
-				"onMouseDown": "function (data)\n{\n\tonMouseDownStartLevels(this);\n}"
-			}
-		},
-		{
-			"type": "SceneObject",
-			"position": {
-				"x": -185,
-				"y": -150
+				"x": -445,
+				"y": -240
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -839,8 +772,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -869,8 +802,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 45,
-				"y": -150
+				"x": -65,
+				"y": -230
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -901,8 +834,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -933,8 +866,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 275,
-				"y": -150
+				"x": 315,
+				"y": -230
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -965,8 +898,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -997,8 +930,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -185,
-				"y": 20
+				"x": 695,
+				"y": -230
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -1029,8 +962,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -1061,8 +994,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 45,
-				"y": 20
+				"x": -445,
+				"y": 140
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -1093,8 +1026,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -1125,8 +1058,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 275,
-				"y": 20
+				"x": -65,
+				"y": 140
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -1157,8 +1090,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -1189,8 +1122,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -185,
-				"y": 190
+				"x": 315,
+				"y": 140
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -1221,8 +1154,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -1253,8 +1186,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 45,
-				"y": 190
+				"x": 695,
+				"y": 140
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -1285,8 +1218,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
+						"x": 225,
+						"y": 120
 					}
 				}
 			],
@@ -1317,72 +1250,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 275,
-				"y": 190
-			},
-			"rotation": 0,
-			"behaviors": [],
-			"sprites": [
-				{
-					"type": "Sprite",
-					"animations": {},
-					"currentAnimation": "default",
-					"sortPoint": {
-						"x": 0,
-						"y": 0
-					},
-					"layer": 1,
-					"autoResize": false,
-					"visible": false,
-					"image": "assets/icons/gemacht.png",
-					"imageArea": {
-						"minX": 0,
-						"minY": 0,
-						"maxX": 1,
-						"maxY": 1
-					},
-					"alwaysDraw": false,
-					"name": "8",
-					"drawModifiers": [],
-					"pixelShader": "",
-					"pixelShaderUniforms": null,
-					"pixelPerfectMouseEvents": 0,
-					"properties": {},
-					"size": {
-						"x": 223.853475296571,
-						"y": 121.72032719251047
-					}
-				}
-			],
-			"spriteOffsets": [
-				{
-					"x": 0,
-					"y": 0,
-					"angle": 0
-				}
-			],
-			"flowChart": null,
-			"grid": null,
-			"alignment": {
-				"x": "center",
-				"y": "center"
-			},
-			"name": "gemacht_8",
-			"isTemplate": false,
-			"path": "",
-			"addToScene": {
-				"autoListen": true,
-				"params": null
-			},
-			"properties": {
-				"instanceOf": "gemacht"
-			}
-		},
-		{
-			"type": "SceneObject",
-			"position": {
-				"x": 430,
-				"y": -385
+				"x": 713,
+				"y": -359
 			},
 			"rotation": 0,
 			"behaviors": [],

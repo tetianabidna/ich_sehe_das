@@ -50,25 +50,6 @@ let dataJSON = [
     },
     {
       "type": "Image",
-      "imgOriginalPath": "assets/imgForPlay/helden_orig.png",
-      "imgClonePath": "assets/imgForPlay/helden_copy.png",
-      "imgWidth": 636,
-      "imgHigh": 715,
-      "coordinatesOfDifferences": [
-        {"x": 480, "y": 348},	// 1. Held Rosa Falte
-        {"x": 120, "y": 200}, // 2. Mädchen P
-        {"x": 52, "y": 416},	// 3. Haus vorne Fenster oben
-        {"x": 145, "y": 385}, // 4. Rosanes Haus
-        {"x": 475, "y": 252},  // 5. Held Zähne
-        {"x": 202, "y": 522},  // 6. Haus weg
-		{"x": 214, "y": 300},  // 7. Hase Feuer
-        {"x": 261, "y": 534},  // 8. Graues Haus + Fenster
-        {"x": 266, "y": 145},  // 9. Fuchs
-        {"x": 371, "y": 371}  // 10. Hund Maske 
-      ]
-    },
-    {
-      "type": "Image",
       "imgOriginalPath": "assets/imgForPlay/bauernhof_orig.png",
       "imgClonePath": "assets/imgForPlay/bauernhof_copy.png",
       "imgWidth": 669,
