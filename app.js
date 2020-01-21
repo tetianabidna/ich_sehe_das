@@ -8,10 +8,12 @@ App = function() {
 
   // this is where the WADE app is initialized
   this.init = function() {
-
-    // load a scene
-    load();
+	load();
   };
+  
+  this.load = function(){
+	  load();
+  }
 
   function load() {
     console.log('LOAD START SCENE');
@@ -42,6 +44,19 @@ App = function() {
       load();
     }, 2000);
   }
+  
+  /*
+  this.mobileStart = function() {
+
+    console.log('GAME OVER');
+
+    wade.clearScene();
+
+    wade.loadScene('scenes/MobileStartScene.wsc', true, function() {});
+
+    
+  }
+  */
 
   this.continueGame = function() {
 

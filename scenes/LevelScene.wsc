@@ -76,7 +76,7 @@
 				"x": "center",
 				"y": "center"
 			},
-			"name": "coin",
+			"name": "heart",
 			"isTemplate": false,
 			"path": "",
 			"addToScene": {
@@ -110,7 +110,7 @@
 		"x": 10000,
 		"y": 10000
 	},
-	"orientation": "none",
+	"orientation": "landscape",
 	"windowMode": "full",
 	"defaultLayer": 1,
 	"timeline": {

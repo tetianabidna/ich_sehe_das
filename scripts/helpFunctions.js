@@ -1,3 +1,7 @@
+function onMouseDownBack(){
+	wade.app.load();
+}
+
 function onMouseDownStartLevels(thiss) {
 
   var id = thiss.getSprite(0).getName();
@@ -20,10 +24,10 @@ function onMouseDownDifferences(thiss) {
     // show the text grammatically correctly
     if (wade.app.totalDifferences == 1) {
       wade.getSceneObject('scoreText').getSprite(0).setText(
-        'Finde ' + wade.app.totalDifferences + ' Unterschied');
+        'Finde NOCH ' + wade.app.totalDifferences + ' Unterschied');
     } else {
       wade.getSceneObject('scoreText').getSprite(0).setText(
-        'Finde ' + wade.app.totalDifferences + ' Unterschiede');
+        'Finde NOCH ' + wade.app.totalDifferences + ' Unterschiede');
     }
 
 
@@ -61,8 +65,8 @@ function didWrongClick() {
     wade.app.allowedClicks--;
     wade.getObjectByName('dollarClicks').getSprite(0).setText(wade.app.allowedClicks);
 
-    //Fade and move the coin 
-    doCoinAnimation();
+    //Fade and move the heart 
+    doHeartAnimation();
   } else {
     wade.app.isDifference = false;
   }
@@ -73,16 +77,16 @@ function didWrongClick() {
 
 }
 
-function doCoinAnimation() {
+function doHeartAnimation() {
 
-  var coin = wade.getSceneObject('coin');
-  coin.moveTo(-1, 140, 50);
-  coin.getBehavior().fadeOut();
+  var heart = wade.getSceneObject('heart');
+  heart.moveTo(-1, 140, 50);
+  heart.getBehavior().fadeOut();
 
   setTimeout(function() {
-    coin.setVisible(false);
-    coin.moveTo(-1, 210, 10);
+    heart.setVisible(false);
+    heart.moveTo(-1, 210, 10);
   }, 200);
 
-  coin.setVisible(true);
+  heart.setVisible(true);
 }

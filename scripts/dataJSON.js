@@ -1,18 +1,18 @@
 let dataJSON = [
-    {
+   {
       "type": "Image",
       "imgOriginalPath": "assets/imgForPlay/dinosaurier_orig.jpeg",
       "imgClonePath": "assets/imgForPlay/dinosaurier_copy.jpeg",
       "imgWidth": 407,
       "imgHigh": 460,
       "coordinatesOfDifferences": [
-        {"x": 148, "y": 264},
-        {"x": 67, "y": 210},
-        {"x": 161, "y": 223},
-        {"x": 141, "y": 350},
-        {"x": 47, "y": 341},
-        {"x": 208, "y": 192},
-        {"x": 272, "y": 333}
+        {"x": 145, "y": 277}, // 1. Bär Bauch
+        {"x": 67, "y": 210},  // 2. Dino Zahn
+        {"x": 166, "y": 217},  // 3. Bär Nase
+        {"x": 141, "y": 350},  // 4. Tieger Bauch
+        {"x": 47, "y": 341},  // 5. Tieger Schwanz
+        {"x": 208, "y": 192},  // 6. Stein Ornament
+        {"x": 272, "y": 333}  // 7. Fuchs Kleid
       ]
     },
     {
@@ -45,6 +45,7 @@ let dataJSON = [
         {"x": 659, "y": 431},  // 5. Fehlender Punkt
         {"x": 403, "y": 917},  // 6. Fehlende Linie
         {"x": 515, "y": 115},  // 7. Farbe der Schnabel 
+		{"x": 239, "y": 588},  // 8. Graues Haar links 
       ]
     },
     {
@@ -55,14 +56,14 @@ let dataJSON = [
       "imgHigh": 715,
       "coordinatesOfDifferences": [
         {"x": 480, "y": 348},	// 1. Held Rosa Falte
-        {"x": 165, "y": 204}, // 2. Mädchen P
-        {"x": 90, "y": 364},	// 3. Haus vorne Fenster oben
-        {"x": 168, "y": 359}, // 4. Rosanes Haus
-        {"x": 344, "y": 386},  // 5. Hund Schnurbard
-        {"x": 281, "y": 290},  // 6. Junge Schuh
-        {"x": 214, "y": 300},  // 7. Hase Feuer
-        {"x": 273, "y": 482},  // 8. Graues Haus + Fenster
-        {"x": 255, "y": 154},  // 9. Fuchs Nase
+        {"x": 120, "y": 200}, // 2. Mädchen P
+        {"x": 52, "y": 416},	// 3. Haus vorne Fenster oben
+        {"x": 145, "y": 385}, // 4. Rosanes Haus
+        {"x": 475, "y": 252},  // 5. Held Zähne
+        {"x": 202, "y": 522},  // 6. Haus weg
+		{"x": 214, "y": 300},  // 7. Hase Feuer
+        {"x": 261, "y": 534},  // 8. Graues Haus + Fenster
+        {"x": 266, "y": 145},  // 9. Fuchs
         {"x": 371, "y": 371}  // 10. Hund Maske 
       ]
     },
@@ -74,15 +75,16 @@ let dataJSON = [
       "imgHigh": 732,
       "coordinatesOfDifferences": [
         {"x": 235, "y": 509},	// 1. Träger
-        {"x": 534, "y": 361}, // 2. Haus Fenster
+        {"x": 524, "y": 348}, // 2. Haus
         {"x": 354, "y": 561},	// 3. Junge vorne Haare
         {"x": 552, "y": 435}, // 4. Pferd Fleck
-        {"x": 601, "y": 357},  // 5. Pferd Schwanz
+        {"x": 598, "y": 364},  // 5. Pferdeschwanz
         {"x": 56, "y": 552},  // 6. Hähnchen Flügel
         {"x": 618, "y": 482},  // 7. Holz
         {"x": 379, "y": 288},  // 8. Schwein Blume
         {"x": 339, "y": 106},  // 9. Hund Halsband
-        {"x": 51, "y": 343}  // 10. Wolke  
+        {"x": 51, "y": 343},  // 10. Wolke  
+        {"x": 197, "y": 143}  // 11. Raabe Richtung  
       ]
     },
     {
@@ -123,7 +125,8 @@ let dataJSON = [
         {"x": 197, "y": 577},  // 10. Kennschild
         {"x": 534, "y": 483},  // 11. Auto Seitenfarbe
         {"x": 446, "y": 436},  // 12. Zebralinie
-		{"x": 188, "y": 469}  // 13. Logo 
+		{"x": 188, "y": 469},  // 13. Logo 
+		{"x": 564, "y": 620}  // 14. Autoseite 
       ]
     },
     {

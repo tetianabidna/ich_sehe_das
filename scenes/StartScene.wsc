@@ -35,8 +35,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 1024,
-						"y": 768
+						"x": 1755,
+						"y": 987
 					}
 				}
 			],
@@ -80,7 +80,7 @@
 					"name": "",
 					"font": "80px AhkioW05-Black",
 					"alignment": "left",
-					"color": "#f5f5f5",
+					"color": "#ffffff",
 					"visible": true,
 					"layer": 1,
 					"maxWidth": 0,
@@ -94,7 +94,7 @@
 					"maxLines": 0,
 					"firstLine": 0,
 					"outlineColor": "#000000",
-					"outlineWidth": 3,
+					"outlineWidth": 2,
 					"boundsScale": {
 						"x": 1,
 						"y": 1
@@ -152,8 +152,8 @@
 					"shadowColor": "#000",
 					"shadowBlur": 0,
 					"shadowOffset": {
-						"x": 2.6,
-						"y": 0.8
+						"x": 0,
+						"y": 0
 					},
 					"lineSpacing": 1,
 					"maxLines": 0,
@@ -1381,8 +1381,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 462,
-				"y": -328.5
+				"x": 430,
+				"y": -320
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -1413,8 +1413,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 59.06378586859955,
-						"y": 95.14933175544257
+						"x": 60,
+						"y": 60
 					}
 				}
 			],
@@ -1502,7 +1502,7 @@
 					"maxLines": 0,
 					"firstLine": 0,
 					"outlineColor": "#000",
-					"outlineWidth": 2,
+					"outlineWidth": 0,
 					"boundsScale": {
 						"x": 1,
 						"y": 1
@@ -1535,7 +1535,7 @@
 					"maxLines": 0,
 					"firstLine": 0,
 					"outlineColor": "#000",
-					"outlineWidth": 2,
+					"outlineWidth": 0,
 					"boundsScale": {
 						"x": 1,
 						"y": 1
@@ -1589,7 +1589,7 @@
 					"layer": 1,
 					"autoResize": false,
 					"visible": false,
-					"image": "assets/icons/Sparschwein.png",
+					"image": "assets/icons/Herz.png",
 					"imageArea": {
 						"minX": 0,
 						"minY": 0,
@@ -1597,15 +1597,15 @@
 						"maxY": 1
 					},
 					"alwaysDraw": false,
-					"name": "Sparswein",
+					"name": "Herz",
 					"drawModifiers": [],
 					"pixelShader": "",
 					"pixelShaderUniforms": null,
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 298.86798825610106,
-						"y": 154.05649336990516
+						"x": 180,
+						"y": 180
 					}
 				},
 				{
@@ -1619,7 +1619,7 @@
 					"layer": 1,
 					"autoResize": false,
 					"visible": false,
-					"image": "assets/icons/coin.png",
+					"image": "assets/icons/Herz.png",
 					"imageArea": {
 						"minX": 0,
 						"minY": 0,
@@ -1627,7 +1627,7 @@
 						"maxY": 1
 					},
 					"alwaysDraw": false,
-					"name": "Coin",
+					"name": "HerzKlein",
 					"drawModifiers": [],
 					"pixelShader": "",
 					"pixelShaderUniforms": null,
@@ -1787,7 +1787,7 @@
 					"maxLines": 0,
 					"firstLine": 0,
 					"outlineColor": "#000",
-					"outlineWidth": 2,
+					"outlineWidth": 0,
 					"boundsScale": {
 						"x": 1,
 						"y": 1
@@ -1820,7 +1820,7 @@
 					"maxLines": 0,
 					"firstLine": 0,
 					"outlineColor": "#000",
-					"outlineWidth": 2,
+					"outlineWidth": 0,
 					"boundsScale": {
 						"x": 1,
 						"y": 1
@@ -1884,7 +1884,7 @@
 					"angle": 0
 				},
 				{
-					"x": -244.13026146926939,
+					"x": -271,
 					"y": -94.32030206320724,
 					"angle": 0
 				},
@@ -2035,14 +2035,14 @@
 		}
 	],
 	"minScreenSize": {
-		"x": 1024,
-		"y": 768
+		"x": 1755,
+		"y": 987
 	},
 	"maxScreenSize": {
-		"x": 1024,
-		"y": 768
+		"x": 1755,
+		"y": 987
 	},
-	"orientation": "none",
+	"orientation": "landscape",
 	"windowMode": "full",
 	"defaultLayer": 1,
 	"timeline": {

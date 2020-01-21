@@ -10,8 +10,8 @@ function buildNewScene(sceneInfo) {
   this.sceneInfo = sceneInfo;
 
   // Set main scene parameter
-  sceneWidth = sceneInfo.imgWidth * 2 + 36;
-  sceneHigh = sceneInfo.imgHigh + 190;
+  sceneWidth = sceneInfo.imgWidth * 2 + sceneInfo.imgWidth*0.1;
+  sceneHigh = sceneInfo.imgHigh + sceneInfo.imgHigh*0.4;
   wade.setMinScreenSize(sceneWidth, sceneHigh);
   wade.setMaxScreenSize(sceneWidth, sceneHigh);
 
@@ -23,17 +23,20 @@ function buildNewScene(sceneInfo) {
   var imgClone = createImgSceneObject(1, sceneInfo.imgClonePath);
   wade.addSceneObject(imgClone);
 
+  // Add heart
+  var imgHeart = createHeart('assets/icons/Herz.png');
+  wade.addSceneObject(imgHeart);
 
-  // Add pig
-  var imgPig = createPig('assets/icons/Sparschwein.png');
-  wade.addSceneObject(imgPig);
+  // Add small heart
+  createSmallHeart('assets/icons/Herz.png');
 
-  // Add Coin
-  createCoin('assets/icons/coin.png');
-
-  // Add pig text fild
-  var pigText = createTextPig();
-  wade.addSceneObject(pigText);
+  // Add heart text field
+  var heartText = createTextHeart();
+  wade.addSceneObject(heartText);
+  
+  // Add back button
+  var backButton = createBackButton();
+  wade.addSceneObject(backButton);
 
   // Add differences
   var coordList = sceneInfo.coordinatesOfDifferences;
@@ -44,7 +47,7 @@ function buildNewScene(sceneInfo) {
         wade.addSceneObject(mark);
     } 
 
-  // Add score text fild
+  // Add score text field
   var scoreText = createTextSceneObject();
   wade.addSceneObject(scoreText);
 
@@ -88,13 +91,43 @@ function createImgGreat(imgFilePath) {
   var imgSprite = new Sprite();
   imgSprite.setLayer(-5);
   imgSprite.setImageFile(imgFilePath);
-  imgSprite.setSize(700, 700);
+  imgSprite.setSize(sceneHigh/1.25, sceneHigh/1.25);
   imgSprite.setVisible(false);
 
   img.addSprite(imgSprite);
 
 
   return img;
+}
+
+function createBackButton(imgFilePath){
+	console.log('creating back button');
+
+  var back = new SceneObject();
+  back.setPosition(-sceneInfo.imgWidth*0.97, -sceneInfo.imgHigh*0.63);
+
+  var backSprite = new Sprite();
+  backSprite.setLayer(10);
+  backSprite.setImageFile('assets/icons/Back.png');
+  backSprite.setSize(sceneHigh/9.0, sceneHigh/10.0);
+
+  back.addSprite(backSprite);
+
+  var transparentSprite = new Sprite();
+  transparentSprite.setLayer(10);
+  transparentSprite.setImageFile('assets/icons/transparent.png');
+  transparentSprite.setSize(sceneHigh/9.0, sceneHigh/10.0);
+
+  back.addSprite(transparentSprite);
+
+  var func = {
+    'onMouseDown': 'function (data)\n{\n\tonMouseDownBack();\n\t\n}'
+  };
+
+  back.importFunctions(func);
+
+
+  return back;
 }
 
 function createMarkSceneObject(posX, posY, origPos, index) {
@@ -141,14 +174,13 @@ function createTextSceneObject() {
   console.log('creating the text in top of the scene');
 
   var text = new SceneObject();
-  text.setPosition(0, -sceneHigh / 2 + 60);
+  text.setPosition(-sceneInfo.imgWidth*0.009, -sceneInfo.imgHigh*0.6);
   text.setName('scoreText');
 
   var textSprite = new TextSprite();
-  textSprite.setFont('45px AhkioW05-Black');
+  textSprite.setFont(sceneInfo.imgWidth*0.1+'px AhkioW05-Light');
   textSprite.setAlignment('center');
-  textSprite.setColor('#696969');
-  textSprite.setShadow('#000', 0, 0, 0);
+  textSprite.setColor('#ffffff');
   textSprite.setVisible(true);
   textSprite.setFixedSize(false);
   text.addSprite(textSprite);
@@ -157,17 +189,17 @@ function createTextSceneObject() {
   return text;
 }
 
-function createPig(imgFilePath) {
+function createHeart(imgFilePath) {
 
-  console.log('creating a pig');
+  console.log('creating a heart');
 
   var img = new SceneObject();
-  img.setPosition(0, sceneHigh / 2 - 35);
+  img.setPosition(-sceneInfo.imgWidth*0.009, sceneInfo.imgHigh*0.59);
 
   var imgSprite = new Sprite();
   imgSprite.setLayer(10);
   imgSprite.setImageFile(imgFilePath);
-  imgSprite.setSize(235, 126);
+  imgSprite.setSize(sceneHigh/4.5, sceneHigh/5.0);
 
   img.addSprite(imgSprite);
 
@@ -175,34 +207,33 @@ function createPig(imgFilePath) {
   return img;
 }
 
-function createCoin(imgFilePath) {
+function createSmallHeart(imgFilePath) {
 
-  console.log('creating a Coin');
+  console.log('creating a small heart');
 
-  var img = wade.getSceneObject('coin');
-  img.setPosition(0, sceneHigh / 2 - 135);
-  img.setName('coin');
+  var img = wade.getSceneObject('heart');
+  img.setPosition(-sceneInfo.imgWidth*0.009, sceneInfo.imgHigh*0.4);
+  img.setName('heart');
 
  
   img.getSprite(0).setLayer(10);
   img.getSprite(0).setImageFile(imgFilePath);
-  img.getSprite(0).setSize(80, 80);
+  img.getSprite(0).setSize(sceneHigh/9.0, sceneHigh/10.0);
   img.getSprite(0).setVisible(false);
 }
 
-function createTextPig() {
+function createTextHeart() {
 
-  console.log('creating wrong-click-text on the pig');
+  console.log('creating wrong-click-text on the heart');
 
   var text = new SceneObject();
-  text.setPosition(5, sceneHigh / 2 - 35);
+  text.setPosition(-sceneInfo.imgWidth*0.001, sceneInfo.imgHigh*0.625);
   text.setName('dollarClicks');
 
   var textSprite = new TextSprite();
-  textSprite.setFont('50px AhkioW05-Black');
+  textSprite.setFont(sceneInfo.imgWidth*0.1+'px AhkioW05-Light');
   textSprite.setAlignment('center');
   textSprite.setColor('#fcfcfc');
-  textSprite.setOutline(2, '#020eb8');
   textSprite.setVisible(true);
   textSprite.setFixedSize(false);
 

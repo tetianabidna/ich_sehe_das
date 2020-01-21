@@ -152,7 +152,7 @@
 		"x": 1024,
 		"y": 768
 	},
-	"orientation": "none",
+	"orientation": "landscape",
 	"windowMode": "full",
 	"defaultLayer": 1,
 	"timeline": {
