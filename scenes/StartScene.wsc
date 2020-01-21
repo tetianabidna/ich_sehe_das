@@ -69,7 +69,7 @@
 			"type": "SceneObject",
 			"position": {
 				"x": -220.98431767164047,
-				"y": -281.50769860920747
+				"y": -355
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -134,7 +134,7 @@
 			"type": "SceneObject",
 			"position": {
 				"x": -342.066583381556,
-				"y": -210.33258503682458
+				"y": -278
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -200,8 +200,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -230,
-				"y": -100
+				"x": -270,
+				"y": -150
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -237,8 +237,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -271,7 +271,7 @@
 			"type": "SceneObject",
 			"position": {
 				"x": 1.168930731241,
-				"y": -100
+				"y": -150
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -302,8 +302,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -337,8 +337,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 230,
-				"y": -100
+				"x": 270,
+				"y": -150
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -369,8 +369,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -405,8 +405,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -230,
-				"y": 70
+				"x": -270,
+				"y": 90
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -437,8 +437,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -473,7 +473,7 @@
 			"type": "SceneObject",
 			"position": {
 				"x": 0,
-				"y": 70
+				"y": 90
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -504,8 +504,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -539,8 +539,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 230,
-				"y": 70
+				"x": 270,
+				"y": 90
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -571,8 +571,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -606,8 +606,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": -230,
-				"y": 240
+				"x": -270,
+				"y": 330
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -638,8 +638,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -674,7 +674,7 @@
 			"type": "SceneObject",
 			"position": {
 				"x": 0,
-				"y": 240
+				"y": 330
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -705,8 +705,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -740,8 +740,8 @@
 		{
 			"type": "SceneObject",
 			"position": {
-				"x": 230,
-				"y": 240
+				"x": 270,
+				"y": 330
 			},
 			"rotation": 0,
 			"behaviors": [],
@@ -772,8 +772,8 @@
 					"pixelPerfectMouseEvents": 0,
 					"properties": {},
 					"size": {
-						"x": 160,
-						"y": 160
+						"x": 220,
+						"y": 220
 					}
 				}
 			],
@@ -1382,7 +1382,7 @@
 			"type": "SceneObject",
 			"position": {
 				"x": 430,
-				"y": -320
+				"y": -385
 			},
 			"rotation": 0,
 			"behaviors": [],
