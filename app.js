@@ -19,7 +19,7 @@ App = function() {
     console.log('LOAD START SCENE');
 
     wade.clearScene();
-    wade.loadScene('scenes/StartScene.wsc', true, function() {
+    wade.loadScene('scenes/StartScene.wsc', false, function() {
       loadLevelPreViews(getDataJSON());
 
       var completedLevelIDs = wade.app.completedLevelIDs;
@@ -37,26 +37,13 @@ App = function() {
 
     wade.clearScene();
 
-    wade.loadScene('scenes/GameOverScene.wsc', true, function() {});
+    wade.loadScene('scenes/GameOverScene.wsc', false, function() {});
 
     setTimeout(function() {
       wade.clearScene();
       load();
     }, 2000);
   }
-  
-  /*
-  this.mobileStart = function() {
-
-    console.log('GAME OVER');
-
-    wade.clearScene();
-
-    wade.loadScene('scenes/MobileStartScene.wsc', true, function() {});
-
-    
-  }
-  */
 
   this.continueGame = function() {
 
@@ -87,7 +74,7 @@ App = function() {
 
     wade.app.currentLevel = idOfImg;
 
-    wade.loadScene('scenes/LevelScene.wsc', true, function() {
+    wade.loadScene('scenes/LevelScene.wsc', false, function() {
 
       var sceneInfo = getSceneInfo(idOfImg);
       wade.app.totalDifferences = sceneInfo.coordinatesOfDifferences.length;

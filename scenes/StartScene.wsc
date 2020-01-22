@@ -78,7 +78,7 @@
 					"type": "TextSprite",
 					"text": "Ich sehe was, ",
 					"name": "",
-					"font": "80px AhkioW05-Black",
+					"font": "80px AhkioW05-Light",
 					"alignment": "left",
 					"color": "#ffffff",
 					"visible": true,
@@ -143,7 +143,7 @@
 					"type": "TextSprite",
 					"text": "was du nicht siehst",
 					"name": "",
-					"font": "90px AhkioW05-Black",
+					"font": "90px AhkioW05-Light",
 					"alignment": "left",
 					"color": "#ffffff",
 					"visible": true,
@@ -1309,7 +1309,7 @@
 			},
 			"properties": {},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\tfor(i=0; i<13; i+=1){\n\t    wade.getSceneObject('infoScene').getSprite(i).setVisible(true);\n\t}\n\t\n\tfor(i=0; i<9; i+=1){\n\t    wade.getSceneObject('level_'+i).getSprite(0).setVisible(false);\n\t}\n\t\n\tfor(i=0; i<wade.app.completedLevelIDs.length; i+=1){\n\t    wade.getSceneObject('gemacht_'+wade.app.completedLevelIDs[i]).getSprite(0).setVisible(false);\n\t}\n}"
+				"onMouseDown": "function (data)\n{\n\twade.getSceneObject('IchSeheWas').getSprite(0).setVisible(false);\n\twade.getSceneObject('WasDuNichtSiehst').getSprite(0).setVisible(false);\n\t\n\tfor(i=0; i<13; i+=1){\n\t    wade.getSceneObject('infoScene').getSprite(i).setVisible(true);\n\t}\n\t\n\tfor(i=0; i<8; i+=1){\n\t    wade.getSceneObject('level_'+i).getSprite(0).setVisible(false);\n\t}\n\t\n\tfor(i=0; i<wade.app.completedLevelIDs.length; i+=1){\n\t    wade.getSceneObject('gemacht_'+wade.app.completedLevelIDs[i]).getSprite(0).setVisible(false);\n\t}\n}"
 			}
 		},
 		{
@@ -1340,7 +1340,7 @@
 						"maxY": 1
 					},
 					"alwaysDraw": false,
-					"name": "",
+					"name": "Hintergrund",
 					"drawModifiers": [],
 					"pixelShader": "",
 					"pixelShaderUniforms": null,
@@ -1355,9 +1355,9 @@
 					"type": "TextSprite",
 					"text": "Hast du einen Unterschied gefunden?",
 					"name": "HastDuEinen",
-					"font": "40px AhkioW05-Black",
+					"font": "40px AhkioW05-Light",
 					"alignment": "left",
-					"color": "#ffff",
+					"color": "#000000",
 					"visible": false,
 					"layer": 1,
 					"maxWidth": 0,
@@ -1388,9 +1388,9 @@
 					"type": "TextSprite",
 					"text": "Dann klick auf das Bild!",
 					"name": "DannKlick",
-					"font": "40px AhkioW05-Black",
+					"font": "40px AhkioW05-Light",
 					"alignment": "left",
-					"color": "#ffff",
+					"color": "#000000",
 					"visible": false,
 					"layer": 1,
 					"maxWidth": 0,
@@ -1638,11 +1638,11 @@
 				},
 				{
 					"type": "TextSprite",
-					"text": "Du gewinnst, wenn du alle Unterschiede findest",
+					"text": "Du gewinnst, wenn du alle Unterschiede findest.",
 					"name": "duGewinnstWenn",
 					"font": "40px AhkioW05-Light",
 					"alignment": "left",
-					"color": "#ffff",
+					"color": "#000000",
 					"visible": false,
 					"layer": 1,
 					"maxWidth": 0,
@@ -1671,11 +1671,11 @@
 				},
 				{
 					"type": "TextSprite",
-					"text": "Du verlierst, wenn du alle Münzen ausgibst",
+					"text": "Du verlierst, wenn du alle Leben verlierst.",
 					"name": "duVerlierstWenn",
 					"font": "40px AhkioW05-Light",
 					"alignment": "left",
-					"color": "#ffff",
+					"color": "#000000",
 					"visible": false,
 					"layer": 1,
 					"maxWidth": 0,
@@ -1883,7 +1883,7 @@
 			},
 			"properties": {},
 			"functions": {
-				"onMouseDown": "function (data)\n{\n\tfor(i=0; i<13; i+=1){\n\t    wade.getSceneObject('infoScene').getSprite(i).setVisible(false);\n\t}\n\t\n\tfor(i=0; i<9; i+=1){\n\t    wade.getSceneObject('level_'+i).getSprite(0).setVisible(true);\n\t}\n\t\n\tfor(i=0; i<wade.app.completedLevelIDs.length; i+=1){\n\t    wade.getSceneObject('gemacht_'+wade.app.completedLevelIDs[i]).getSprite(0).setVisible(true);\n\t}\n}"
+				"onMouseDown": "function (data)\n{\n\twade.getSceneObject('IchSeheWas').getSprite(0).setVisible(true);\n\twade.getSceneObject('WasDuNichtSiehst').getSprite(0).setVisible(true);\n\t\n\t\n\tfor(i=0; i<13; i+=1){\n\t    wade.getSceneObject('infoScene').getSprite(i).setVisible(false);\n\t}\n\t\n\tfor(i=0; i<8; i+=1){\n\t    wade.getSceneObject('level_'+i).getSprite(0).setVisible(true);\n\t}\n\t\n\tfor(i=0; i<wade.app.completedLevelIDs.length; i+=1){\n\t    wade.getSceneObject('gemacht_'+wade.app.completedLevelIDs[i]).getSprite(0).setVisible(true);\n\t}\n}"
 			}
 		}
 	],
