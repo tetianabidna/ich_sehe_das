@@ -1,9 +1,23 @@
+// Main and most important .js file. The game sequence is determined here and also 
+// how the game and the individual scenes behave when a specific action is triggered
 App = function() {
-
+	
+	
+// Number of differences, every level reinitializes it because pictures can have a different 
+// number of differences
   this.totalDifferences;
+  
+// Number of allowed clicks before game over, every level reinitializes it because pictures 
+// can have a different number of differences
   this.allowedClicks;
+  
+// Boolean that shows if a difference was clicked
   this.isDifference = false;
+
+// In this array are the IDs of the solved levels 
   this.completedLevelIDs = [];
+  
+  // -1 because level IDs start with 0
   this.currentLevel = -1;
 
   // this is where the WADE app is initialized
@@ -15,12 +29,14 @@ App = function() {
 	  load();
   }
 
+// Loads StartScene.wsc and checks after every load which levels were completed 
+// and marks them with a green check mark 
   function load() {
     console.log('LOAD START SCENE');
 
     wade.clearScene();
     wade.loadScene('scenes/StartScene.wsc', false, function() {
-      loadLevelPreViews(getDataJSON());
+      loadLevelPreviews(getDataJSON());
 
       var completedLevelIDs = wade.app.completedLevelIDs;
       for (i = 0; i < completedLevelIDs.length; i += 1) {
@@ -31,6 +47,7 @@ App = function() {
     });
   }
 
+// Loads GameOverScene.wsc, waits 2s and then loads StartScene.wsc
   this.gameOver = function() {
 
     console.log('GAME OVER');
@@ -45,10 +62,11 @@ App = function() {
     }, 2000);
   }
 
+// If a level is done its ID is appended to completedLevelIDs Array and
+// StartScene.wsc is loaded
   this.continueGame = function() {
 
     console.log('WON THE GAME');
-
 
     var exist = false;
 
@@ -67,6 +85,9 @@ App = function() {
     load();
   }
 
+
+// After a level in StartScene.wsc is selected, LevelScene.wsc is loaded and 
+// totalDifferences and allowedClicks are initialized
   this.buildAndLoadNewScene = function(idOfImg) {
     console.log('BUILD NEW LEVEL');
 
@@ -80,7 +101,7 @@ App = function() {
       wade.app.totalDifferences = sceneInfo.coordinatesOfDifferences.length;
       wade.app.allowedClicks = sceneInfo.coordinatesOfDifferences.length - 2;
 
-    console.log('Before');
+      console.log('Before');
       buildNewScene(sceneInfo);
 
       wade.getSceneObject('scoreText').getSprite(0).setText('Finde ' + wade.app.totalDifferences + ' Unterschiede');

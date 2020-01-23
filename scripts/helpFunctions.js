@@ -1,15 +1,19 @@
-function onMouseDownBack(){
-	wade.app.load();
+// Is called when back button(arrow) in LevelScene.wsc is clicked
+// Sends back to StartScene.wsc
+function onMouseDownBack() {
+  wade.app.load();
 }
 
+// On mouse click on preview the corresponding level will be created
+// @param thiss: Clicked SceneObject. It shows which image will be loaded
 function onMouseDownStartLevels(thiss) {
 
   var id = thiss.getSprite(0).getName();
-  console.log('id: '+ id);
   wade.app.buildAndLoadNewScene(id);
 }
 
-
+//Is called when a difference is found on a picture
+// @param thiss: Clicked SceneObject is the mark which marks the differences
 function onMouseDownDifferences(thiss) {
 
   if (!thiss.isFound && !thiss.clonedObject.isFound) {
@@ -58,7 +62,7 @@ function onMouseDownDifferences(thiss) {
   }
 }
 
-
+//Is called when the image is clicked but no differences were found
 function didWrongClick() {
 
   if (wade.app.isDifference === false) {
@@ -74,7 +78,6 @@ function didWrongClick() {
   if (wade.app.allowedClicks === 0) {
     wade.app.gameOver();
   }
-
 }
 
 function doHeartAnimation() {

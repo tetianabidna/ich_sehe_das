@@ -1,21 +1,25 @@
 this.sceneInfo;
 
 var sceneWidth;
-var sceneHigh;
+var sceneHeight;
+
+// Designs the LevelScene.wsc and adds the scene objects
+// SceneObject sizes are dynamically calculated according to imgWidth and imgHeight
+// imgWidth and imgHeight are taken from @param: sceneInfo (originally from dataJson.js)
 
 function buildNewScene(sceneInfo) {
-    
-  console.log('Build new level');
+
+  console.log('Design the LevelScene');
 
   this.sceneInfo = sceneInfo;
 
   // Set main scene parameter
-  sceneWidth = sceneInfo.imgWidth * 2 + sceneInfo.imgWidth*0.1;
-  sceneHigh = sceneInfo.imgHigh + sceneInfo.imgHigh*0.4;
-  wade.setMinScreenSize(sceneWidth, sceneHigh);
-  wade.setMaxScreenSize(sceneWidth, sceneHigh);
+  sceneWidth = sceneInfo.imgWidth * 2 + sceneInfo.imgWidth * 0.1;
+  sceneHeight = sceneInfo.imgHeight + sceneInfo.imgHeight * 0.4;
+  wade.setMinScreenSize(sceneWidth, sceneHeight);
+  wade.setMaxScreenSize(sceneWidth, sceneHeight);
 
-  // Add orininal image
+  // Add original image
   var imgOrig = createImgSceneObject(-1, sceneInfo.imgOriginalPath);
   wade.addSceneObject(imgOrig);
 
@@ -33,7 +37,7 @@ function buildNewScene(sceneInfo) {
   // Add heart text field
   var heartText = createTextHeart();
   wade.addSceneObject(heartText);
-  
+
   // Add back button
   var backButton = createBackButton();
   wade.addSceneObject(backButton);
@@ -42,23 +46,24 @@ function buildNewScene(sceneInfo) {
   var coordList = sceneInfo.coordinatesOfDifferences;
   wade.app.totalDifferences = coordList.length;
 
-   for (i=0; i<coordList.length; i+=1){
-        var mark = createMarkSceneObject(coordList[i].x, coordList[i].y, imgOrig._position.x, i);
-        wade.addSceneObject(mark);
-    } 
+  for (i = 0; i < coordList.length; i += 1) {
+    var mark = createMarkSceneObject(coordList[i].x, coordList[i].y, imgOrig._position.x, i);
+    wade.addSceneObject(mark);
+  }
 
   // Add score text field
   var scoreText = createTextSceneObject();
   wade.addSceneObject(scoreText);
 
-  // Add "Gut Gemacht" picture
+  // Add "Gut Gemacht" image
   var imgGreat = createImgGreat('assets/icons/GutGemacht.png');
   wade.addSceneObject(imgGreat);
 }
 
+//
 function createImgSceneObject(posOrientation, imgFilePath) {
 
-  console.log('creating two scene pictures');
+  console.log('creating one of the difference Images');
 
   var img = new SceneObject();
   img.setPosition(posOrientation * sceneWidth / 4.0, 0);
@@ -66,7 +71,7 @@ function createImgSceneObject(posOrientation, imgFilePath) {
   var imgSprite = new Sprite();
   imgSprite.setLayer(10);
   imgSprite.setImageFile(imgFilePath);
-  imgSprite.setSize(sceneInfo.imgWidth, sceneInfo.imgHigh);
+  imgSprite.setSize(sceneInfo.imgWidth, sceneInfo.imgHeight);
 
   img.addSprite(imgSprite);
 
@@ -82,7 +87,7 @@ function createImgSceneObject(posOrientation, imgFilePath) {
 
 function createImgGreat(imgFilePath) {
 
-  console.log('creating great-picture');
+  console.log('creating "GutGemacht" image ');
 
   var img = new SceneObject();
   img.setPosition(0, 10);
@@ -91,7 +96,7 @@ function createImgGreat(imgFilePath) {
   var imgSprite = new Sprite();
   imgSprite.setLayer(-5);
   imgSprite.setImageFile(imgFilePath);
-  imgSprite.setSize(sceneHigh/1.25, sceneHigh/1.25);
+  imgSprite.setSize(sceneHeight / 1.25, sceneHeight / 1.25);
   imgSprite.setVisible(false);
 
   img.addSprite(imgSprite);
@@ -100,23 +105,23 @@ function createImgGreat(imgFilePath) {
   return img;
 }
 
-function createBackButton(imgFilePath){
-	console.log('creating back button');
+function createBackButton(imgFilePath) {
+  console.log('creating back button');
 
   var back = new SceneObject();
-  back.setPosition(-sceneInfo.imgWidth*0.97, -sceneInfo.imgHigh*0.63);
+  back.setPosition(-sceneInfo.imgWidth * 0.97, -sceneInfo.imgHeight * 0.63);
 
   var backSprite = new Sprite();
   backSprite.setLayer(10);
   backSprite.setImageFile('assets/icons/Back.png');
-  backSprite.setSize(sceneHigh/9.0, sceneHigh/10.0);
+  backSprite.setSize(sceneHeight / 9.0, sceneHeight / 10.0);
 
   back.addSprite(backSprite);
 
   var transparentSprite = new Sprite();
   transparentSprite.setLayer(10);
   transparentSprite.setImageFile('assets/icons/transparent.png');
-  transparentSprite.setSize(sceneHigh/9.0, sceneHigh/10.0);
+  transparentSprite.setSize(sceneHeight / 9.0, sceneHeight / 10.0);
 
   back.addSprite(transparentSprite);
 
@@ -136,14 +141,14 @@ function createMarkSceneObject(posX, posY, origPos, index) {
 
   var mark = new SceneObject();
   var x = origPos - sceneInfo.imgWidth / 2.0 + posX;
-  var y = posY - sceneInfo.imgHigh / 2.0;
+  var y = posY - sceneInfo.imgHeight / 2.0;
   mark.setPosition(x, y);
 
   var markSprite = new Sprite();
   markSprite.setLayer(10);
   markSprite.setImageFile('assets/icons/x.png');
   markSprite.setVisible(false); // auf false aendern
-  var markSize = Math.sqrt(sceneInfo.imgWidth * sceneInfo.imgHigh / 42.0);
+  var markSize = Math.sqrt(sceneInfo.imgWidth * sceneInfo.imgHeight / 42.0);
   markSprite.setSize(markSize, markSize);
 
   mark.addSprite(markSprite);
@@ -174,17 +179,17 @@ function createTextSceneObject() {
   console.log('creating the text in top of the scene');
 
   var text = new SceneObject();
-  text.setPosition(-sceneInfo.imgWidth*0.009, -sceneInfo.imgHigh*0.6);
+  text.setPosition(-sceneInfo.imgWidth * 0.009, -sceneInfo.imgHeight * 0.6);
   text.setName('scoreText');
 
   var textSprite = new TextSprite();
-  textSprite.setFont(sceneInfo.imgWidth*0.1+'px AhkioW05-Light');
+  textSprite.setFont(sceneInfo.imgWidth * 0.1 + 'px AhkioW05-Light');
   textSprite.setAlignment('center');
   textSprite.setColor('#ffffff');
   textSprite.setVisible(true);
   textSprite.setFixedSize(false);
   text.addSprite(textSprite);
-  
+
 
   return text;
 }
@@ -194,12 +199,12 @@ function createHeart(imgFilePath) {
   console.log('creating a heart');
 
   var img = new SceneObject();
-  img.setPosition(-sceneInfo.imgWidth*0.009, sceneInfo.imgHigh*0.59);
+  img.setPosition(-sceneInfo.imgWidth * 0.009, sceneInfo.imgHeight * 0.59);
 
   var imgSprite = new Sprite();
   imgSprite.setLayer(10);
   imgSprite.setImageFile(imgFilePath);
-  imgSprite.setSize(sceneHigh/4.5, sceneHigh/5.0);
+  imgSprite.setSize(sceneHeight / 4.5, sceneHeight / 5.0);
 
   img.addSprite(imgSprite);
 
@@ -212,13 +217,13 @@ function createSmallHeart(imgFilePath) {
   console.log('creating a small heart');
 
   var img = wade.getSceneObject('heart');
-  img.setPosition(-sceneInfo.imgWidth*0.009, sceneInfo.imgHigh*0.4);
+  img.setPosition(-sceneInfo.imgWidth * 0.009, sceneInfo.imgHeight * 0.4);
   img.setName('heart');
 
- 
+
   img.getSprite(0).setLayer(10);
   img.getSprite(0).setImageFile(imgFilePath);
-  img.getSprite(0).setSize(sceneHigh/9.0, sceneHigh/10.0);
+  img.getSprite(0).setSize(sceneHeight / 9.0, sceneHeight / 10.0);
   img.getSprite(0).setVisible(false);
 }
 
@@ -227,11 +232,11 @@ function createTextHeart() {
   console.log('creating wrong-click-text on the heart');
 
   var text = new SceneObject();
-  text.setPosition(-sceneInfo.imgWidth*0.001, sceneInfo.imgHigh*0.625);
+  text.setPosition(-sceneInfo.imgWidth * 0.001, sceneInfo.imgHeight * 0.625);
   text.setName('dollarClicks');
 
   var textSprite = new TextSprite();
-  textSprite.setFont(sceneInfo.imgWidth*0.1+'px AhkioW05-Light');
+  textSprite.setFont(sceneInfo.imgWidth * 0.1 + 'px AhkioW05-Light');
   textSprite.setAlignment('center');
   textSprite.setColor('#fcfcfc');
   textSprite.setVisible(true);
